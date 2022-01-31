@@ -1,0 +1,19 @@
+.container {
+    margin-top: 30px;
+}
+
+form {
+    display: flex;
+}
+
+form button,input{
+    margin: 10px;
+    padding: 5px;
+}
+
+form input {
+    flex-grow: 1;
+}
+form button{
+    width: 100px;
+}

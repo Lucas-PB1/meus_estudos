@@ -1,0 +1,27 @@
+#Exemplo {
+	/*Declaração*/
+	display: grid;
+	/*Pode definir tamanho e quantidade de colunas, exemplo grid-templates-columns: coluna1 coluna2*/
+	grid-template-columns: 200px 200px;
+	/*Pode definir tamanho e quantidade de linhas, exemplo grid-templates-rows: linha1 linhas2*/
+	grid-template-rows: 200px 200px;
+	/*A unidade "fr" define que a linha ou coluna deve possuir todos espaço exemplo*/
+	grid-template-rows: 1fr 2fr 1fr;
+	/*a segunda linha pode consumir 2 vezes o espaço das demais*/
+	/*O "repeat" permite copiar elementos*/
+	grid-template-rows: repeat(3, 1fr);
+	/*3 linhas de espaço livre*/
+	/*Medem os espaços gerais, seja ele entre linhas, colunas ou ambos*/
+	grid-gap: 1px;
+	grid-row-gap: 1px;
+	grid-column-gap: 1px;
+	/*Permiete desenhar de acordo com a areas*/
+	grid-area: nome-da-area;
+	grid-template-areas:
+		"area1"
+		"area1"
+		"area1";
+	/*Função minmax*/
+	grid-auto-rows: minmax(100px, 200px);
+	/*A linhas terão no minimo 100px e max de 200px*/
+}

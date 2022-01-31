@@ -1,0 +1,228 @@
+.chave {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body,
+html {
+	height: 100%;
+}
+
+
+/*
+//Fonte face é o tipo de query para adicionar fontes, onde vai se adicionar os aspectos da conta
+//nome, caminho, etc, o formato do arquivo é woof
+	@font-face{
+		font-family: my_font;
+		src: url(fonts/opensans-regular-webfont.woff);
+	}
+
+//Chamada de url, do google fonts pra se adicionar fontes etc
+	@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+//Para texto formais é possivel usar
+	font-variant: small-caps;
+
+//Para definir uma estilo se a fonte é mais forte etc se usa
+	font-weight:;
+
+//Você pode definir o estilo da fonte com;
+	font-style: italic;
+	font-style: oblique;
+	font-style: normal;
+
+//Existem outros modos de referenciar o css assim:
+	.classe[caracteristica = dado de referencia]{}
+
+//Uso de float, para usar float deve se determinar a áreas que estão flutuando, exemplo
+<elemento pai>
+	<primeiro filho>
+	<segundo filho>
+</fim do elemento pai>
+
+Para que eles se ajustem é necessario, que o primeiro filho flutue para a esquerda e o segundo para a direita
+
+primeiro filho
+	float:right;
+
+segundo filho
+	float left
+
+//Definir cores do background com opacidade, deve ser usado rgpba e no final se define a opacidade
+	background-color: rgba(142,124,124,0.6);
+
+//Um degrade entre cores, é possivel definir a direção com visto abaixo, é possivel usar angulos
+	background: linear-gradient(90deg,yellow,orange,brown);
+	background: linear-gradient(to right top,yellow,orange,brown);
+
+//Um degrade a partir do centro
+	background: radial-gradient(red, green, orange, yellow);
+
+//Para mudar os elementos de uma div é possivel usar tb:
+	text-transform: uppercase;
+	text-transform: lowecase;
+	text-transform: capitalize;
+
+//Criar um paragrafo
+	text-indent: 20px;
+
+//Espaço entre linhas
+	line-height: 20px;
+
+//Direção do texto
+	direction: rtl;
+	direita = rtl, esquerda = ltl
+
+//Espaço entre letras
+	letter-spacing: 5px;
+
+//Espaço entre palavras
+	word-spacing: 5px;
+
+//Sombras do texto, text-shadow: <horizontal> <vertical> <desfoque> <cor>
+	text-shadow: 2px 4px 10px black;
+
+//Sombras do box, box-shadow: <horizontal> <vertical> <desfoque> <cor>
+	box-shadow: 2px 3px 4px black;
+
+//Como fazer que o padding e borda não ocupe espaços:
+	box-sizing: border-box;
+
+//Como limitar o que aparece além da div
+	overflow: hidden;
+	overflow: auto;
+	overflow: scroll;
+
+//Opacidade ( trasparencia )
+ 	opacity: 0.4;
+
+//Arrendodamento de bordas
+ 	border-radius: <vale pra todas as bordas>
+	border-radius: <superior esquerda e inferior direita> <inferior esquerda e superior direita>
+	border-radius: <superior esquerda> <inferior esquerda e superior direita> <inferior direita>
+	border-radius: <superior esquerda> <superior direita> <inferior direita> <inferior esquerda>
+
+//Arredodamento individual
+	border-top-left-radius: medida;
+	border-bottom-left-radius: medida;
+	border-top-right-radius: medida;
+	border-bottom-right-radius: medida;
+
+//Text decoration
+ 	text-decoration: underline;
+ 	text-decoration: line-through;
+ 	text-decoration: overline;
+
+//Max e Min
+Min é o tamanho minimo que não se alterará
+Permite que o design se ajuste de acordo com o tamanho da tela
+já quando se usar "Height e Width" naturalmente o valor permanecerá fixo
+
+//Padding, é possivel se definir todos os paddings assim:
+padding: 10px 10px 10px 10px;
+A partir do sentido horario: cime, direita, baixo, esquerda;
+Ps: O mesmo serve para margin
+
+//O position absolute permite que um elemento se movimente para qualquer lugar da página
+//para determinar sua posição deve ser usar
+	left, right, top, bottom.
+//Para que haja uma relação com o elemento pai deve ser usar "position: relative;"
+
+//Position: fixed, vai fazer com que mesmo que a página seja scrollada o elemento não se mova
+
+//border style, define o estilo da borda
+	border-width: 10px;
+	border-style: dotted;
+	border-color: yellow;
+
+//Outline tem duas diferenças do border
+1 - Não trabalha com bordar individualmente
+2 - A bordar dele é externa ao contéudo
+outline: dotted 2px red;
+
+//Hover é uma pseudo classe que controla as interações dos elementos quando o mouse passa por cima dele
+
+//Trasition, a propriedade que controla as transições no css
+	transition-property: all; //elemento a ser transitado
+	transition-duration: 3s; //duração da transição
+	transition-delay: 1s; //delay para que ocorra transição
+	transition-timing-function: ease-in-out;  //Saida e entrada lenta
+	transition-timing-function: ease-in;  //entrada lenta
+	transition-timing-function: ease-out; //saida lenda
+	transition-timing-function: linear; //tempos iguais
+	
+	redução:
+	transition: <propriedade> <duração> <ritmo> <delay>;
+	transition: background-color 2s linear 1s,width 2s, height 2s; //Também é possivel definir elementos separados
+
+//Background
+	background-image: url(img/teste.png);
+	background-repeat: repeat-x; //Repetir horizontal
+	background-repeat: repeat-y; //Repetir Vertical
+	background-repeat: no-repeat; //Sem repetir
+	background-position: left center; //Posição do background
+	background-attachment: fixed; //Determina se ele é fixo, no default ele é scroll
+	background-size: 100% 100%; //<horizontal> <vertical>
+
+	redução:
+	background: <url> <position>/ <tamanho> <repete?> <fixo ou não>
+
+//Para corrigir erros com float use
+	clear:both;
+
+//Para adicionar um elemento com css direto no doc use
+	.classe::before{ //Antes
+		content: "contéudo";
+		caracteristicas: ;
+	}
+	.classe::after{ //Depois
+		content: "contéudo";
+		caracteristicas: ;
+	}
+
+//Quando uma color é definida, é possivel usar currentColor, no lugar das cores para que ele siga
+//a cor ja antes definida
+	color:blue;
+	background-color: currentColor;
+
+//A pseudo classe :root, é o lugar onde variaveis css são declaradas
+	:root{
+		--default-color:white;
+		--default-bg:black;
+		--default-padding:4px;
+	}
+//O uso delas se dá a partir do "var"
+	color: var(--default-color);
+
+//A pseudo classe :target, serve para nos casos onde referenciamos um id interno, exemplo
+
+<a href="#n1">
+<p id = "n1" class = "aqui">Oi</p>
+
+//Ao clicar e mirar no texto abaixo a pseudo classe é ativa
+.aqui:target{
+	color:azul;
+}
+
+//Reset e normalize css, são metodos de limpeza de css que ajustam os padrões entre navegadores, o bootstrap
+//Já vêm por default com normalize.css
+
+//Filtros
+	filter: blur(em pixel) //Desfoque
+	filter: brigtness(100%) //iluminação, por default está em 100%
+	filter: contrat(100%)	//Contraste, por default está em 100%
+	filter: grayscale(0%)	//Adiciona cinza a imagem, por padrão "none"
+	filter: invert(0%)		//Inverte as cores, por default "None"
+	filter opacity(100%)	//Visibilidade, por padrão 100%
+	filter: saturate(100%)	//Por default 100%, saturação da imagem
+	filter: sepia(0%);		//Filter pra sepia, por padrão "None";
+	filter: hue-rotate(0deg) //Mudanças de cores a partir do blur, por padrão zero, usa angulo
+	filter: drop-shaddow(<horizantal <vertical> <espaçamento> <cor>)	//Cria uma sombra, como nas dms funções
+*/

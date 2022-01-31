@@ -1,0 +1,9 @@
+.container form, .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container form input, h1, button{
+    margin-bottom: 20px;
+}

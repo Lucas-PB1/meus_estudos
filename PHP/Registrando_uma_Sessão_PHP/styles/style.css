@@ -1,0 +1,18 @@
+.container form{
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container form input{
+    width: 200px;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+}
+
+.container form button{
+    padding: 5px 15px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}

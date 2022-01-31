@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!--Para html5-->
+<h1></h1>
+<!--Até-->
+<h6></h6>
+<!--Para titulos-->
+<p></p>
+<!--Para paragrafos-->
+<a href=""></a>
+<!--Para links-->
+<img>
+<!--Para imagens-->
+<br>
+<!--Para pular linhas-->
+<!--Existem dois tipos de url-->
+<!--Absoluto: -->
+<a href="C:\xamp\htdocs\aprendendotudo.com\Guia html\basic_html\index.html"></a>
+<!--Relativo: -->
+<a href="Guia html\basic_html\index.html"></a>
+<a href="#" alt="Texto alternativo"></a>
+<!--É responsavel por texto alternativo em imagens-->
+<a href="#" style="width: auto; height: 40px;"></a>
+<!--É possivel definir o css com o atributo style-->
+<html lang="pt-br">
+
+</html>
+<!--É o atributo que indica a lingua da página-->
+<img title="">
+<!--O elemento title define o texto que aparecerá no elemento quando se passa o mouse por cima-->
+<pre></pre>
+<!--É uma alternativa para uso de paragrafo com quebra de linha-->
+<b></b>
+<!--Texto em negrito-->
+<strong></strong>
+<!--texto importante-->
+<i></i>
+<!--texto em itálico-->
+<em></em>
+<!--Texto enfatizado-->
+<mark></mark>
+<!--texto marcado-->
+<small></small>
+<!--Texto menor-->
+<del></del>
+<!--Texto excluído-->
+<ins></ins>
+<!--texto inserido-->
+<sub></sub>
+<!--Texto subscrito-->
+<sup></sup>
+<!--Texto sobrescrito-->
+<blockquote cite="http:endereco.com"></blockquote>
+<!--É a tag que deve ser usada para citações-->
+<q></q>
+<!--Para citações curtas-->
+<abbr></abbr>
+<!--É a tag que marca abreviações-->
+<address></address>
+<!--É a tag que deve ser usada para marcar informações de contato-->
+<cite></cite>
+<!--É a tag usada para titulos de coisas criativas, pinturas ou obras etc-->
+<bdo dir="rtl"></bdo>
+<!--É a tag usada pra direcionar ou inventer texto-->
+<a href="#" target="_blank"></a>
+<!-- Os atributos de target:
+_self- Padrão. Abre o documento na mesma janela / guia em que foi clicado
+_blank - Abre o documento em uma nova janela ou guia
+_parent - Abre o documento no quadro pai
+_top - Abre o documento em todo o corpo da janela -->
+<!--É possivel mirar em um atributo local: -->
+<p id="teste">Texto</p>
+<a href="#teste">teste</a>
+<!--Esse é um link local-->
+<a href="mailto:someone@example.com"></a>
+<!--Mailto é o atributo usado para facilitar que usuario envie email e outras coisas-->
+<button onclick="document.location ='google.com'"">google</button><!--Dando um link a um botão de forma simples e local-->
+<a href=" #"></a>
+    <!--Um link não visitado é marcado pelas subclasses, a:link, para o link puro, a:hover, para o 
+link quando se passa o mouse em cima do link, a:visited para um link ja clicado, a:active para um link que funciona-->
+    <img src="">
+    <!--Especifica o caminho da imagem-->
+    <img src="#" usemap="#imagem">
+    <!--Use usemap para definir qual a imagem que será um mapa-->
+    <map name="imagem">
+        <!--O name do mapa deve ser o mesmo do usemap-->
+        <area shape="rect" coords="34, 44, 270, 350" href="computer.htm">
+        <!--Para definir uma area retangular e linkar ela-->
+        <area shape="circle">
+        <!--Para circulo, deve se passar um parametro e o raio do circulo-->
+        <area shape="default">
+        <!--Para uma área padrão seguindo os pontos indicados-->
+        <area shape="poly">
+        <!--Para areas sem forma definida-->
+    </map>
+    <picture>
+        <!--É uma alternativa para definir imagens de formas adaptaveis-->
+        <source media="(min-width: 300px)" srcset="#">
+        <!--Se a tela for menor que 300px uma nova imagem será setada-->
+        <img src="antiga.jpg">
+        <!--Imagem atual-->
+    </picture>
+    <!--Definição de tabelas -->
+    <table>
+        <!--Definindo uma tabela-->
+        <tr></tr>
+        <!--Define a zonas de cedulas da tabela-->
+        <th></th>
+        <!--Define um titulo das tabelas-->
+        <td></td>
+        <!--Define um icone da tabela-->
+        <td colspan="2"></td>
+        <!--Para que uma celula abranja mais de uma coluna-->
+        <td rowspan="2"></td>
+        <!--Para que uma celula abranja mais de uma linha-->
+        <caption></caption>
+        <!--Para uma descrição de tabela-->
+    </table>
+    <!--Existe duas pseudo classes no css chamadas tr:nth-child(odd)(impar) e tr:nth-child(even)(par), que podem ser usadas
+para mexer em elementos especificos da tabela-->
+    <ul></ul>
+    <!--É uma lista não ordenada que fica marcada por pontinhos pretos a esquerda-->
+    <li></li>
+    <!--Definição para itens de uma <ul> e <ol> -->
+    <ol></ol>
+    <!--É uma lista ordenada por números-->
+    <dl></dl>
+    <!--É uma lista de descrição, onde especifica itens-->
+    <dt></dt>
+    <!--É o nome do item da lista <dl>-->
+    <dd></dd>
+    <!--É o a descrição do item na lista <dl>-->
+    <!--Para ul, é possivel se modificar os elementos de identicação com list-style-type:none/circle/square/disc-->
+    <!--É possivel criar uma lista lateral definindo que o elementos filhos "li", flutuem para a esquerda
+e preferencialmente fazendo com que o elementos internos ao filhos sejam marcados com "display: block"-->
+    <ol type="1"></ol>
+    <!--É possivel definir alguns elementos da lista ordenada com o atributo type-->
+    <!--
+type="1"	Números (default)
+type="A"	Letras maiusculas letters
+type="a"	Letras minusculas
+type="I"	Números romanos maiusculos
+type="i"	Números romanos minusculas
+-->
+    <div></div>
+    <!--Para marcar um área especifica-->
+    <span></span>
+    <!--É usado para marcar pedaços de elementos ou inserir algo-->
+    <br>
+    <!--Exemplo de mostrar e ocultar senha-->
+    <input placeholder="senha" type="password" id="senha">
+    <br><button id="buttor-mostrar" onclick="mostrar();">Mostrar senha</button>
+    <script>
+        let init = true;
+        function mostrar(){
+            if(init){
+                let x = document.getElementById("senha");
+                document.getElementById("buttor-mostrar").innerHTML = "Ocultar senha";
+                x.type="text";
+                init = false;
+            }else{
+                let x = document.getElementById("senha");
+                document.getElementById("buttor-mostrar").innerHTML = "Mostrar senha";
+                x.type="password";
+                init = true;
+            }
+            
+        }
+    </script>
+
+<a href="html_demo.html#C4">Mirando em outro lugar</a><br><!--Também é possivel mirar um lugar espefico de outra página-->
+
+<!--Um iframe pode ser usado para incorporar uma página dentro de outra-->
+<iframe src="index.html" title="carregando...." name="iframe_a" height="300px" width="100%"></iframe>
+<!--Link usando o elemento target pode alterar a composição do iframe-->
+<p><a href="\Guia html\basic_html\index.html" target="iframe_a">Teste</a></p>
+
+<noscript></noscript><!--A tag noscritp so será exibida em caso do usuario desativar o javascript-->
+
+<img src="#"><!--Imagens tb podem possuir links externos-->
+
+<link><!--A tag link é muito usada para definir a relação de um recurso interno com um externo, muitas
+vezes usadas e folhas de estilo-->
+
+<!--A tag meta possui muitas funcionalidades entre elas estão-->
+<meta charset="UTF-8"><!--Definir o conjunto de caracteres a serem usados-->
+<meta name="keywords" content="HTML, CSS, JavaScript"><!--Definir palavras chaves que influenciam na pesquisa-->
+<meta name="description" content="Free Web tutorials"><!--Descrição da página-->
+<meta name="author" content="John Doe"><!--Autor da página-->
+<meta http-equiv="refresh" content="30"><!--Recarregue o documento a cada 30 segundos-->
+<!--Janela de visualização que faz com que seu site tenha uma boa aparência-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--Obs: 
+A width=device-width parte define a largura da página para seguir a largura da tela do dispositivo (que irá variar dependendo do dispositivo).
+A initial-scale=1.0 parte define o nível de zoom inicial quando a página é carregada pela primeira vez pelo navegador.
+-->
+
+<base href="https:google.com/" target="_blank"><!-- E a tag usada para definir a "base" de todas a ulrs existentes numa página, so podendo haver 1 base por documento-->
+
+<header><!--Define um cabeçalho para um documento ou seção-->
+<section></section><!--A tag section, serve para dermarcar uma sequencia de contéudo geralemente tematico em uma página-->
+<article></article><!--A tag article serve pra demarcar contéudo independente é uma página-->
+<nav></nav><!--A tag nav geralmente é usada para enumerar links de acesso-->
+<aside><!--Define o conteúdo além do conteúdo (como uma barra lateral)-->
+<footer><!--Define um rodapé para um documento ou seção-->
+<details><!--Define detalhes adicionais que o usuário pode abrir e fechar sob demanda-->
+<summary><!-- Define um título para o <details>elemento-->
+
+<code></code><!--É a tag usada para definir que o usuario está definindo um codigo-->
+<kbd></kbd><!--É a tag que indica os comandos de sáida ficando bem desmarcados pela mesma-->
+<samp></samp><!--É a tag usada para definir alguma mensagem de saída de um programa sendo executado-->
+<var></var><!--É a tag usada para demarcar as variavies sejam elas de expressoões matematicas ou codigos-->
+
+<figure></figure><!--Define contéudo independente como imagens etc-->
+<figcaption></figcaption><!--Define o titulo desse componente-->
+
+<!--&nbsp; É um espaço inquebravel que impede que o navegador bagunce ou exclua espaços em branco-->
+<!--É possivel usar emojis e simbolos com html se possuirem as sequencia numericas correspondentes-->
+
+<form></form><!--É usado para definir um campo que possuirá dados para formularios-->
+
+<input><!--Input é o elemento de entrada de dados
+possuindo alguns types
+
+<input type = "text">	Exibe um campo de entrada de texto de linha única
+<input type = "radio">	Exibe um botão de opção (para selecionar uma das muitas opções)
+<input type = "checkbox">	Exibe uma caixa de seleção (para selecionar zero ou mais de muitas opções)
+<input type = "submit">	Exibe um botão de envio (para enviar o formulário)
+<input type = "button">	Exibe um botão clicável
+-->
+
+<label for="ola">aqui</label><!--Label é a tag que indica o titulo de um input-->
+<input type="text" name="ola">
+
+<!--Atributos de um formulario-->
+
+<form action="/action_page.php"></form><!--Realiza uma função que envia dados do formulario a outra página-->
+
+<form target="_blank"></form><!--
+_blank	Nova guia
+_self	Na mesma página
+_parent	Num parente da página
+_top	Mostra na página toda???
+framename	Envia para um iframe
+-->
+
+<form method="GET"></form><!--Metodos de envio de dados:-->
+
+<!--
+    Notas sobre GET:
+Acrescenta os dados do formulário ao URL, em pares nome / valor
+NUNCA use GET para enviar dados confidenciais! (os dados do formulário enviado são visíveis no URL!)
+O comprimento de um URL é limitado (2.048 caracteres)
+Útil para envios de formulários onde um usuário deseja marcar o resultado
+GET é bom para dados não seguros, como strings de consulta no Google
+    Notas no POST:
+Acrescenta os dados do formulário dentro do corpo da solicitação HTTP (os dados do formulário enviado não são mostrados no URL)
+O POST não tem limitações de tamanho e pode ser usado para enviar grandes quantidades de dados.
+Os envios de formulários com POST não podem ser marcados
+-->
+
+<form action="/action_page.php" autocomplete="on"></form><!--O navegador preenche os dados se baseando no que foi inserido anteriormente-->
+<form action="/action_page.php" novalidate></form><!--Informa que os dados não devem ser validos antes de enviar-->
+
+<select></select><!--Abre uma caixa de seleção-->
+<option></option><!--Opções da caixa de seleção-->
+<option selected></option><!--Marca uma opção como ja selecionada desde o inicio-->
+<select size="2"></select><!--Size definirá quanto valores podem ser visualizados por vez no select-->
+<select multiple></select><!--Permite que o usario escolha mais de um valor-->
+
+<textarea name="message" rows="10" cols="30"><!--O atributo que define uma aréa de texto, rows para linha exibidas e cols para largura-->
+The cat was playing in the garden.
+</textarea>
+
+<fieldset></fieldset><!--Define um quadrado de area selecioanada-->
+<legend></legend><!--Define o titulo desse quadrado-->
+
+<input list="ok">
+<datalist id="ok"><!--Datalist define as opções flutuantes de input, sendo o id do datalist igual ao list do input-->
+    <option></option>
+</datalist>
+
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)"><!--O metodo oninput, realizara o calculo buscando os valores-->
+  <input type="range" id="a" name="a" value="50"><!--O input do type "range" mostrará uma barra de progressão que vai de um a 100-->
+  <input type="number" id="b" name="b" value="50"><!-- O input number criará um campo onde apenas números serão permitidos-->
+  <output name="x" for="a b"></output><!--O output puxa o elemento x do oninput e o for "a b", para indicar a raiz do calculo-->
+</form>
+
+<input type="password"><!--Tipo usado para senhas-->
+<input type="submit"><!--Tipo usado como modo de envio-->
+<input type="reset"><!--Usado para apagar todos os dados de um form e recomeçar-->
+<input type="color"><!--Colo possibilita a escolha de cores-->
+<input type="date"><!--Permite a entrada de data-->
+<input type="date" max="1979-12-31" min="2000-01-02"><!--Controla a data maxima e minima que pode ser escolhida-->
+<input type="datetime-local"><!--Permite a hora data e local -->
+<input type="email" id="email" name="email"><!--Faz com que o usuario seja obrigado a usar um email-->
+<input type="file"><!--Permite que o usuario faça upload de um tipo de dado-->
+<input type="month"><!--Permite que o usuario escolha mês e ano-->
+<input type="number" min="1" max="5"> <!--Permite que o usuario escolha um número com mim e max-->
+<input type="text" maxlength="10"><!--Limita tamnanho de informações a serem inseridas-->
+<input type="number" step="10"><!--Fará com que o valor suba de 10 em 10-->
+<input type="search"> <!--Um tipo de input usado para pesquisa-->
+<input type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"> <!--Permite uma entrada numerica ordenada e predefinida-->
+<input type="time"><!--Permite que vc insira um certo tempo-->
+<input type="url"><!--Limita a entrada de dados a apenas urls-->
+<input type="week"><!--Permite que o usuario insira uma semana e um ano -->
+<input type="text" value="John" readonly><br><!--Faz com certo valor so seja lido, não podendo ser modificado-->
+<input type="text" disabled><!--Faz com que o valor não posso ser acessado-->
+<input type="text" size="10"><!--Define a largura visisel do inputs-->
+<input type="text" autofocus><!--Define a propriedade que deve ser focada asssim que a página for carregada-->

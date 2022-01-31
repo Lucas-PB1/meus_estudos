@@ -1,0 +1,23 @@
+.card-first {
+    flex: 1;
+    margin: 20px;
+    display: flex;
+    min-width: 300px;
+    max-width: 345px;
+    min-height: 230px;
+    color: #000000;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 5px solid #d8e940;
+}
+
+.card-first .content {
+    flex: 1;
+    padding: 15px;
+    border-bottom: 2px solid #d8e940;
+}
+
+.card-first .title {
+    padding: 10px;
+    background-color: #d8e940;
+}

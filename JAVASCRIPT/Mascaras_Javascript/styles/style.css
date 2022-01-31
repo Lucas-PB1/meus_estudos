@@ -1,0 +1,31 @@
+body,
+html {
+    background-color: #242222;
+    color: whitesmoke;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    margin: 20px;
+    border: 1px solid white;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button,
+input {
+    margin: 5px;
+    color: black;
+}
+
+#erro{
+    display: none;
+}

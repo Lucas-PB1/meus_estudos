@@ -1,0 +1,27 @@
+#Exemplo {
+	/*Declaração*/
+	display: flex;
+	/*Flex direction definde a direção, linha, coluna, linha  e coluna reversos, o padrão é linha*/
+	flex-direction: row-reverse/row/column-reverse/column;
+	/*Define o quanto um elemento pode ser encolihdo*/
+	flex-shrink: 0/1/2;
+	/*Define de pode ser quebrado ou não, o padrão é não quebrar, sem quebra, quebrando, quebrando pra cima*/
+	flex-wrap: nowrap/wrap/wrap-reverse;
+	/*Proprieade abreviada, flex-flow: <Linha ou coluna> <quebra  ou não quebra>*/
+	flex-flow: column wrap;
+	/*O quanto um elemento pode crescer*/
+	flex-grow: 0/1/2;
+	/*Serve para determinar um comprimento ou altura de um objeto flex*/
+	flex-basis: 200px;
+	/*Redução, flex: grow shrink basis*/
+	flex: 1 1 200px;
+	/*O align itens, ajusta o itens de acordo com a direção do flex, stretch ( preecher)
+	center ( centro )  flex-start ( Inicio do flex ) flex-end ( final do flex )*/
+	align-items: stretch/center/flex-start/flex-end;
+	/*Define o posicionamento interno de itens é um flexbox, possui as chaves que align-items
+	com adição do space-between ( espaço entre nós ), space around ( espaço ao redor )*/
+	justify-content: space-between/space-around;
+	/**/
+	/**/
+	/**/
+}

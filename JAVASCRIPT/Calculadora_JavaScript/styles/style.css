@@ -1,0 +1,46 @@
+body,
+html {
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: white;
+}
+
+.buttons {
+    display: grid;
+    list-style-type: none;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.buttons span {
+    padding: 20px 30px;
+    font-size: 30px;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+}
+
+.buttons span:hover {
+    background-color: black;
+}
+
+.result {
+    border: 1px solid white;
+    padding: 7px 20px;
+    font-size: 30px;
+    text-align: right;
+    background-color: black;
+    color: white;
+}
+
+.result,
+.buttons {
+    width: 30%;
+}

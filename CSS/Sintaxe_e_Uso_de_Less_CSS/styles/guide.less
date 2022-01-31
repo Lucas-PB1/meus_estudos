@@ -1,0 +1,167 @@
+/*
+//O comando para compilar o less é lessc (less) (css)
+
+//Less usa Nested rules
+Exemplo:
+    div{
+        div{}
+    }
+
+//Media screen se refere a tela em si, seja ela mobile ou web
+@media screen{}
+
+//É possivel determinar certos parametros variando a partir do tamanho da tela
+@media (min-width: 400px){}
+
+//Variaveis em less
+//Para declarar uma varivel em less se usa @nome-da-variavel, o nome deve distinguir do padrão do css
+@nome-teste: red;
+
+//Variaveis em less suportam operadores matematicos logicos, Ex:
+@tamanho: 10px;
+body{ font-size: @tamanho * 2}
+//Ps: também é possivel calcular as cores, mudando tonalidade etc
+
+//Existem algumas funções no Less como "percetage()", que consegue pegar o valores internos e trasformar em
+//Porcertagem
+
+//Exemplos basicos de funções less
+        color: alpha(); //Retorna o alfa da cor;
+        color: argb(); //Cria uma cor no formato argb;
+        color: blue(); //Retorna o azul da cor;
+        color: contrast(); 
+        //Na função contraste ele avalia se a cor passada confere com o
+        // padrão apresetado e retorna a cor que corresponder no "if";
+    Ps: Existem muitas funções não citadas
+
+//É possivel importar arquivos do less diretamente em outro arquivo, ex:
+@import "nome-do-arquivo.less"
+
+//Mixins
+Com mixins é possivel reutilizar trechos de codigos em especifico
+semelhante a funções, ex
+
+.center(@back: lightgray){
+    background-color: @back;
+    display:flex;
+    justify-content: center;
+    align-itens: center;    
+}
+
+.content{
+    background-color: gray;
+    .center(@red);
+}
+
+//Para usar a subclasses como ligação é possivel da seguinte forma:
+
+a{
+    color: blue;
+    &:hover{
+        color: fade(blue, 10);
+    }
+}
+
+//Namespaces
+//Para usar namespaces se segue a seguinte forma:
+
+#teste(){
+    .default{
+        color: red;
+        font-size: 1em;
+        font-style: italic;
+    }
+    .image{
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
+//Chamando  um namespace e indicando a função chamada.
+ .title {
+        #teste > .default;
+    }
+
+//Tambpem é possivel usar namespace com condicionais
+@color:blue;
+#hum when (@color = blue){
+    .testing(){
+        color: rgb(14, 15, 15);
+    }
+}
+#hum when (@color = red){
+    .testing(){
+        color: rgb(241, 255, 240);
+    }
+}
+.pai {
+    .title {
+        #hum .testing();
+    }
+}
+//Como exemplificado acima
+
+//Usando operador "if"
+.hover(@cor, @size) when (@size < 16px) and (@cor = black) {
+    transition: all 2s linear 2s;
+    &:hover{
+        font-size: 20px;
+        color: fade(@cor, 20%);
+    }
+}
+
+.pai {
+    .texto {
+        font-size: 12px;
+        color: blue;
+        .hover(black, 14px);
+    }
+}
+
+//Outros exemplos
+.dark(@cor) when (iscolor(@cor)){
+    color: darken(@cor, 10%);
+}
+
+.pai {
+    .texto {
+       .dark(red)
+    }
+}
+//É possivel que se use is[argumento] ( sem as chaves ) para verificar o tipo de valor
+
+//Para mesclar atributos é possivel usando "~", exemplo
+
+box-shaddow~: paramentros
+box-shaddow~:parametros
+ou
+padding~_: 5px;
+padding~_: 8px;
+//Mesclara os contéudos
+
+//Um contador usando Less
+.contador(@count) when (@count > 0){
+    width: @count;
+    .contador(@count - 1);
+}
+
+.pai {
+       .contador(3);
+}
+
+//O seletor "&" dentro da seguinte formula afetará todos os demais parenres
+
+div{
+    &{
+    }
+}
+
+//Quando usado "&" ele marca que certos parentes do partição serão afetados
+//Também pode ser usado assim 
+div{
+    & a{
+        //Essse codigo influncia em dizer que todos os filhos "a" desta div herdarão essas caracteristicas 
+    }
+}
+
+//
+*/

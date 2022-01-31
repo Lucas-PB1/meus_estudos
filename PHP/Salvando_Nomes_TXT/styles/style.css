@@ -1,0 +1,38 @@
+.container {
+    margin-top: 30px;
+}
+
+form {
+    display: flex;
+}
+
+form button,
+input {
+    margin: 10px;
+    padding: 5px;
+}
+
+form input {
+    flex-grow: 1;
+}
+
+form button {
+    width: 100px;
+}
+
+.container ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.container ul ul {
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    list-style: none;
+    color: #ffffff;
+    min-width: 200px;
+    flex-direction: column;
+    background-color: black;
+}
