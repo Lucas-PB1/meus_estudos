@@ -1,0 +1,9 @@
+// Scripts que estão declarados dentro do package podem ser executados diretamente:
+
+npm start
+npm test
+
+// Os que não, deve se adicionar o run antes do nome
+
+npm run dev
+npn run new-script

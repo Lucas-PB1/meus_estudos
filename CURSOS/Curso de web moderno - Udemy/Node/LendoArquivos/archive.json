@@ -1,0 +1,8 @@
+{
+    "db": {
+        "host": "localhost",
+        "database": "teste-local",
+        "user": "root",
+        "senha": "root"
+    }
+}
